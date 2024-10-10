@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty HUT</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header Section -->
+  <header class="bg-white shadow sticky top-0">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Tasty HUT</h1>
+      <div class="flex gap-4 items-center">
+
+<!-- Trigger Sign In Modal Button -->
+<button class="bg-blue-500 text-white px-4 py-2 rounded-md" id="openModalBtn">Sign In</button>
+
+<!-- Sign-in Modal (Initially Hidden) -->
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden z-50" id="signinModal">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold text-gray-700">Sign In</h2>
+      <button class="text-gray-500 hover:text-gray-700" id="closeModalBtn">&times;</button>
+    </div>
+    <form id="signInForm">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Email</label>
+        <input type="email" id="email"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your email" required>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="password">Password</label>
+        <input type="password" id="password"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600">
+        Sign In
+      </button>
+    </form>
+    <div class="flex justify-between items-center mt-4">
+      <a href="#" class="text-sm text-blue-500 hover:underline">Forgot Password?</a>
+      <a href="#" class="text-sm text-blue-500 hover:underline">Create Account</a>
+    </div>
+  </div>
+</div>
+
+        <img class="w-8 h-8" src="./images/user.png" alt="">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-96" style="background-image: url('./images/banner_1.png');">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+      <div class="text-center text-white">
+        <h2 class="text-4xl font-bold">Taste Our Delicious<br> Best Foods</h2>
+        <p class="mt-4">There are many varieties of dishes to explore, but we mostly focus on quality.</p>
+        <input type="text" placeholder=" Search your food" class="mt-4 px-4 py-2 rounded text-black" />
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favourite Food Section -->
+  <section class="max-w-6xl mx-auto my-8">
+    <h2 class="text-3xl font-bold text-center mb-6">Your Favourite Food</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Food Item Card -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="your-food-image.jpg" alt="Food" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Chicken Handi</h3>
+          <p class="text-gray-600">There are many varieties of chicken handi to explore...</p>
+          <a href="#" class="text-yellow-500 font-bold">View Details</a>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for other food items -->
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="bg-yellow-500 text-white px-4 py-2 rounded">Show All</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-white p-4 mt-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h4 class="font-bold">Section</h4>
+        <ul>
+          <li><a href="#" class="text-gray-600">Home</a></li>
+          <li><a href="#" class="text-gray-600">UI/UX Design</a></li>
+          <li><a href="#" class="text-gray-600">Product Design</a></li>
+          <li><a href="#" class="text-gray-600">Pricing</a></li>
+          <li><a href="#" class="text-gray-600">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Resources</h4>
+        <ul>
+          <li><a href="#" class="text-gray-600">Support</a></li>
+          <li><a href="#" class="text-gray-600">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-600">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Subscribe to our newsletter</h4>
+        <input type="email" placeholder="Enter email address" class="mt-2 px-4 py-2 rounded">
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded mt-2">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+<script src="f1.js"></script>
+<script src="allData.js"></script>
+
+</body>
+
+</html>
